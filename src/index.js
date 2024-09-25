@@ -10,10 +10,12 @@ console.log('Bem-vindo(a) ao carrinho de compras da Shopee!')
 const item1 = await createItem("Hot-Wheels", 20.99, 1);
 const item2 = await createItem("LEGO", 110.49, 1);
 
-console.log(item2.subtotal())
+// console.log(item2.subtotal())
 
 await cartModule.addItem(myCart, item1)
-await cartModule.addItem(myWishList, item2)
+await cartModule.addItem(myCart, item2)
+await cartModule.deleteItem(myCart, item1.name)
+
 
 console.log('Shopee Total Cart')
 await cartModule.calculateTotel(myCart)
