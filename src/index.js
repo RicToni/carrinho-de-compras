@@ -15,4 +15,5 @@ const item2 = await createItem("LEGO", 110.49, 1);
 await cartModule.addItem(myCart, item1)
 await cartModule.addItem(myCart, item2)
 await cartModule.calculateTotel(myCart)
+await cartModule.removeItem(myCart, 1)
 await cartModule.displayCart(myCart)

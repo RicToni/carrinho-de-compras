@@ -12,7 +12,10 @@ async function deleteItem(userCart, nameItem) {
 }
 
 async function removeItem(userCart, indexCart) {
-    
+    const deleteIndex = indexCart - 1
+    if (indexCart >= 0 && indexCart < userCart.length){
+        userCart.splice(deleteIndex, 1)
+    }
 }
 
 async function displayCart(userCart) {
@@ -23,7 +26,8 @@ async function displayCart(userCart) {
 }
 
 async function calculateTotel(userCart) {
-    console.log(userCart.reduce((total, item) => total + item.subtotal(), 0));
+    const result = userCart.reduce((total, item) => total + item.subtotal(), 0);
+    console.log(`\nTotal: ${result}`)
 }
 
 export {
