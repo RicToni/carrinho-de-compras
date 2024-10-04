@@ -14,8 +14,5 @@ const item2 = await createItem("LEGO", 110.49, 1);
 
 await cartModule.addItem(myCart, item1)
 await cartModule.addItem(myCart, item2)
-await cartModule.deleteItem(myCart, item1.name)
-
-
-console.log('Shopee Total Cart')
 await cartModule.calculateTotel(myCart)
+await cartModule.displayCart(myCart)
